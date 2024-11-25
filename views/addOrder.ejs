@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Order</title>
+    <link rel="stylesheet" href="/css/orders.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Create New Order</h1>
+
+        <form action="/orders/add" method="POST">
+            
+            <div class="mb-3">
+                <label for="customer_name" class="form-label">Customer Name:</label>
+                <input type="text" class="form-control" id="customer_name" name="customer_name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <select class="form-select" id="status" name="status" required>
+                    <option value="pending">Pending</option> 
+                    <option value="shipped">Shipped</option> 
+                    <option value="delivered">Delivered</option> 
+                </select>
+            </div>
+
+            <div id="orderDetailsContainer">
+                <h4>Order Details</h4>
+                <div class="mb-3 order-detail"> 
+                    <label for="product_id" class="form-label">Product ID</label>
+                    <input type="number" class="form-control" name="orderDetails[0][product_id]" required>
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" name="orderDetails[0][quantity]" min="0" required>
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" class="form-control" name="orderDetails[0][price]" min="0" required>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-secondary" onclick="addOrderItem()">Add Item</button> 
+            <button type="submit" class="btn btn-primary">Place Order</button>
+        </form>
+    </div>
+
+    <script>
+        let itemCount = 1; // To keep track of added items
+
+        function addOrderItem() {
+            const orderDetailsContainer = document.getElementById('orderDetailsContainer');
+            const newOrderDetail = `
+                <div class="mb-3 order-detail">
+                    <label for="product_id" class="form-label">Product ID</label>
+                    <input type="number" class="form-control" name="orderDetails[${itemCount}][product_id]" required>
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" name="orderDetails[${itemCount}][quantity]" required>
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" class="form-control" name="orderDetails[${itemCount}][price]" required>
+                </div>
+            `;
+            orderDetailsContainer.innerHTML += newOrderDetail;
+            itemCount++;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
