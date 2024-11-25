@@ -1,5 +1,13 @@
 # Electronic Shop Inventory Management System
 
+## Group Members
+
+- Somesh Chinchokar (22210406)
+- Shreyash Chile (22210849)
+- Sahil Chavan (22210416)
+- Parth Garud (22211522)
+
+
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Features](#features)
