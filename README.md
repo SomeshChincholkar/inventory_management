@@ -3,6 +3,7 @@
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Features](#features)
+- [User Interface](#UI)
 - [Technologies Used](#technologies-used)
 - [Database Schema](#database-schema)
 - [Installation and Setup](#installation-and-setup)
@@ -25,6 +26,13 @@ The **Electronic Shop Inventory Management System** is a web-based application d
 - Flash messages for real-time user feedback.
 
 ---
+
+## UI
+![Screenshot 2024-11-24 141417](https://github.com/user-attachments/assets/22996b9e-d973-4ab5-a475-1d4969dadda6)
+![Screenshot 2024-11-24 141428](https://github.com/user-attachments/assets/2355d4b9-3206-4934-9202-3636df5b55c8)
+![Screenshot 2024-11-24 141442](https://github.com/user-attachments/assets/4b3993fe-a6c2-4fa4-9d44-e0a8438ed491)
+![Screenshot 2024-11-24 141503](https://github.com/user-attachments/assets/e70ce9aa-fcf8-4cd1-a56e-0616bdbc293d)
+
 
 ## Technologies Used
 - **Backend**: Node.js, Express.js
