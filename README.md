@@ -83,27 +83,35 @@ The system uses the following tables:
 6. Access the application in your browser:
    http://localhost:3000
 
-## routes   
-Product Routes
-Method	Endpoint	             Description
-GET	   /products	             View all products.
-GET	   /products/add         	 View form to add a new product.
-POST	 /products/add	         Add a new product.
-GET	   /products/edit/:id	     View form to edit a product.
-POST	 /products/edit/:id	     Update product details.
-POST	 /products/delete/:id	   Delete a product and inventory.
-GET	   /products/search	       Search for products by name.
-GET	   /products/productlog    View the product activity log.3000
 
-Order Routes
-Method	Endpoint	               Description
-GET	    /orders	                 View all orders.
-GET	    /orders/add	             View form to create a new order.
-POST	  /orders/add	             Add a new order.
-GET	    /orders/edit/:order_id	 View form to edit an order.
-POST	  /orders/edit/:order_id	 Update order details.
-POST	  /orders/delete/:order_id Delete an order and its details.
-GET	    /orders/orderlog	       View the order activity log.
+## Routes
+
+### Product Routes
+
+| **Method** | **Endpoint**              | **Description**                           |
+|------------|---------------------------|-------------------------------------------|
+| GET        | `/products`               | View all products.                        |
+| GET        | `/products/add`           | View form to add a new product.           |
+| POST       | `/products/add`           | Add a new product.                        |
+| GET        | `/products/edit/:id`      | View form to edit a product.              |
+| POST       | `/products/edit/:id`      | Update product details.                   |
+| POST       | `/products/delete/:id`    | Delete a product and its inventory.       |
+| GET        | `/products/search`        | Search for products by name.              |
+| GET        | `/products/productlog`    | View the product activity log.            |
+
+---
+
+### Order Routes
+
+| **Method** | **Endpoint**               | **Description**                           |
+|------------|----------------------------|-------------------------------------------|
+| GET        | `/orders`                  | View all orders.                          |
+| GET        | `/orders/add`              | View form to create a new order.          |
+| POST       | `/orders/add`              | Add a new order.                          |
+| GET        | `/orders/edit/:order_id`   | View form to edit an order.               |
+| POST       | `/orders/edit/:order_id`   | Update order details.                     |
+| POST       | `/orders/delete/:order_id` | Delete an order and its associated details.|
+| GET        | `/orders/orderlog`         | View the order activity log.              |
 
 
 
